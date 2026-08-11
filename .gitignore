@@ -1,0 +1,4 @@
+node_modules/
+# 개인정보(이름·연락처·이메일)와 발사 이력은 저장소에 두지 않는다
+profile.json
+out/

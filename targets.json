@@ -1,0 +1,48 @@
+{
+  "_설명": "발송 대상 목록. url 만 있으면 자동 매핑에 맡기고, 자동으로 못 잡는 칸은 overrides 에 셀렉터를 직접 적는다. 한 페이지에 폼이 여러 개면 formIndex 로 고를 수 있다(로그의 '폼 후보 N개' 경고 참고). messageSuffix 는 사이트별로 1~2문장 바꿔 붙이는 자리 — 동일 문구 대량 발송은 스팸 처리돼서 회신율이 떨어진다.",
+  "targets": [
+    {
+      "url": "https://pointail.jp/ko",
+      "_메모": "포인테일 자체 사이트. 매핑 검증용 테스트 타깃.",
+      "inquiryTypePriority": ["기타"],
+      "sourcePriority": ["검색"],
+      "locationPriority": ["한국"],
+      "messageSuffix": ""
+    },
+    {
+      "url": "https://partners.pugshop.co.kr/contact",
+      "_메모": "퍼그샵 파트너스. 매핑 검증용.",
+      "overrides": {},
+      "messageSuffix": ""
+    },
+    {
+      "url": "https://setoworks.com/contact",
+      "messageSuffix": "세토웍스에서 진행하시는 글로벌 진출 프로젝트 중 일본 EC 채널의 리뷰·체험단 실행이 필요한 건이 있다면 저희가 그 파트를 맡을 수 있습니다."
+    },
+    {
+      "url": "https://respace.co.kr/contact?formId=2b1c7e05-3721-408d-b9fb-c16a47977c9c",
+      "checkConsents": ["네, 동의합니다."],
+      "answers": { "캠페인 희망 날짜": "미정 — 협의 후 결정" },
+      "messageSuffix": "리스페이스에서 진행하시는 오프라인 캠페인·브랜드 경험 프로젝트 중 일본 시장을 겨냥한 건이 있다면, 현지 EC 채널의 리뷰·체험단 실행을 저희가 맡을 수 있습니다."
+    },
+    { "url": "https://ascentai.one/contact/", "_메모": "ascentkorea.com → ascentai.one/contact/ 로 리다이렉트", "messageSuffix": "귀사에서 진행하시는 SEO·콘텐츠 마케팅 프로젝트 중 일본 현지 리뷰·체험단 실행이 필요한 건이 있다면 저희가 도와드릴 수 있습니다." },
+    { "url": "https://zeffiroinc.com", "_메모": "reCAPTCHA v3 차단 — 수동 발송 필요", "_skip": true, "dismissPopup": "일주일간 보지않기", "messageSuffix": "귀사에서 관리하시는 브랜드 중 일본 EC 채널 리뷰·시딩 실행이 필요하신 곳이 있다면 저희가 그 파트를 맡을 수 있습니다." },
+    { "url": "https://www.bestswit.com/contact-us", "messageSuffix": "귀사에서 진행하시는 디지털 마케팅 프로젝트 중 일본 리뷰·체험단 실행이 필요한 건이 있다면 저희가 도와드릴 수 있습니다." },
+    { "url": "https://avantrade.co.kr", "messageSuffix": "귀사에서 관리하시는 브랜드 중 일본 진출 관련 리뷰·인플루언서 시딩이 필요하신 곳이 있다면 저희가 그 실행 파트를 맡을 수 있습니다." },
+    { "url": "https://gyseoul.co.kr/contact-us/", "messageSuffix": "귀사에서 진행하시는 브랜드 캠페인 중 일본 EC 채널 리뷰·체험단 실행이 필요한 건이 있다면 저희가 도와드릴 수 있습니다." },
+    { "url": "https://firstpageup.com", "_메모": "메인 페이지 하단에 폼 있음 — 스크롤 필요", "messageSuffix": "귀사에서 진행하시는 검색·콘텐츠 마케팅 프로젝트 중 일본 현지 리뷰·시딩 실행이 필요한 건이 있다면 저희가 그 파트를 맡을 수 있습니다." },
+    { "url": "https://www.ezcos.co.kr", "_메모": "봇 차단 — 수동 발송 필요", "_skip": true, "messageSuffix": "귀사에서 관리하시는 뷰티·코스메틱 브랜드 중 일본 EC 채널(앳코스메·라쿠텐 등) 리뷰·체험단 실행이 필요한 곳이 있다면 저희가 도와드릴 수 있습니다." },
+    { "url": "https://aegislab.imweb.me/contact", "messageSuffix": "귀사에서 진행하시는 마케팅 프로젝트 중 일본 EC 채널 리뷰·체험단 실행이 필요한 건이 있다면 저희가 그 파트를 맡을 수 있습니다." },
+    { "url": "http://www.lemecoin.com", "_메모": "SSL 인증서 오류 — 수동 발송 필요", "_skip": true, "messageSuffix": "귀사에서 관리하시는 브랜드 중 일본 진출 관련 리뷰·인플루언서 시딩이 필요하신 곳이 있다면 저희가 실행 파트를 맡을 수 있습니다." },
+    { "url": "https://www.soft7marketing.com", "targetMarketPriority": ["아시아", "글로벌", "기타"], "messageSuffix": "귀사에서 진행하시는 퍼포먼스·바이럴 마케팅 프로젝트 중 일본 현지 리뷰·시딩 실행이 필요한 건이 있다면 저희가 도와드릴 수 있습니다." },
+    { "url": "https://www.a1mediagroup.co.kr", "messageSuffix": "귀사에서 관리하시는 브랜드 중 일본 EC 채널 리뷰·체험단 실행이 필요한 곳이 있다면 저희가 그 파트를 맡을 수 있습니다." },
+    { "url": "https://m.namukorea.com/renew2/onlynamu/namu03.php", "messageSuffix": "귀사에서 진행하시는 마케팅 프로젝트 중 일본 현지 리뷰·시딩 실행이 필요한 건이 있다면 저희가 도와드릴 수 있습니다." },
+    { "url": "https://www.interad.com/contact-us", "messageSuffix": "귀사에서 진행하시는 디지털 광고·마케팅 프로젝트 중 일본 EC 채널 리뷰·체험단 실행이 필요한 건이 있다면 저희가 그 파트를 맡을 수 있습니다." },
+    { "url": "https://ichinisan.kr", "messageSuffix": "귀사에서 진행하시는 일본 마케팅 프로젝트 중 EC 채널 리뷰·체험단 실행이 필요한 건이 있다면 저희가 도와드릴 수 있습니다." },
+    { "url": "https://www.comma-entertainment.com/korean-social-media-agency", "messageSuffix": "귀사에서 관리하시는 브랜드·아티스트 중 일본 시장 리뷰·인플루언서 시딩이 필요하신 곳이 있다면 저희가 실행 파트를 맡을 수 있습니다." },
+    { "url": "https://ohbrown.co.kr/contact/business/", "messageSuffix": "귀사에서 진행하시는 마케팅 프로젝트 중 일본 EC 채널 리뷰·체험단 실행이 필요한 건이 있다면 저희가 그 파트를 맡을 수 있습니다." },
+    { "url": "https://12pmu139.ninehire.site", "_메모": "채용 홈페이지 — 문의 폼 없음, 스킵", "_skip": true, "messageSuffix": "" },
+    { "url": "https://www.borderx.com/contact", "messageSuffix": "귀사에서 진행하시는 크로스보더 커머스 프로젝트 중 일본 EC 채널 리뷰·체험단 실행이 필요한 건이 있다면 저희가 그 파트를 맡을 수 있습니다." },
+    { "url": "https://raqross.com", "messageSuffix": "귀사에서 진행하시는 마케팅 프로젝트 중 일본 EC 채널 리뷰·체험단 실행이 필요한 건이 있다면 저희가 도와드릴 수 있습니다." }
+  ]
+}

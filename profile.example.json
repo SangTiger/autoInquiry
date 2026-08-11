@@ -1,0 +1,26 @@
+{
+  "company": "회사명을 넣으세요",
+  "name": "담당자 성함",
+  "phone": "010-0000-0000",
+  "email": "you@example.com",
+  "inquiryTypePriority": [
+    "대행사 협업/문의",
+    "협업",
+    "제휴",
+    "파트너",
+    "광고 대행",
+    "마케팅",
+    "기타"
+  ],
+  "sourcePriority": [
+    "검색",
+    "SEARCH",
+    "기타",
+    "ETC"
+  ],
+  "agreeRequired": true,
+  "agreeMarketing": false,
+  "_message_메모": "{{suffix}} 자리에 targets.json 의 messageSuffix 가 들어간다. 사이트별로 1~2문장 바꿔 붙여야 스팸 처리를 피한다.",
+  "message": "안녕하세요, {회사명} {담당자}입니다.\n\n{여기에 소개와 제안 내용을 쓴다}\n\n{{suffix}}\n\n회신 주시면 자료를 바로 전달드리겠습니다.\n\n감사합니다!",
+  "_설명": "profile.json 으로 복사해서 자기 정보로 채우면 된다. message 안의 {{suffix}} 자리에 targets.json 의 messageSuffix 가 들어간다."
+}

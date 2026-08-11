@@ -1,0 +1,13 @@
+{
+  "name": "form-filler",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "문의폼 자동 작성 도구 — 프로필 1개 + 자동 필드매핑으로 임의 사이트 문의폼을 채운다",
+  "scripts": {
+    "dry": "node fill.mjs --url https://partners.pugshop.co.kr/contact --json"
+  },
+  "dependencies": {
+    "playwright": "^1.56.0"
+  }
+}
