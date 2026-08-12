@@ -124,6 +124,10 @@ async function processTarget(browser, target) {
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
     // 클라이언트 렌더 폼(Next.js 등)이 그려질 시간을 준다
     await page.waitForTimeout(1500);
+    // 페이지 하단까지 스크롤 — AOS/Intersection Observer 로 지연 렌더되는 폼 트리거
+    // ⚠️ 상단 복귀는 pickBestContext 이후에 한다 — Elementor 등은 뷰포트 벗어나면 다시 hidden 처리됨
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)).catch(() => {});
+    await page.waitForTimeout(1200);
 
     // 팝업 자동 닫기
     // 공통 패턴(×, 닫기, 확인, close 버튼)을 자동 시도한다.
@@ -152,6 +156,8 @@ async function processTarget(browser, target) {
     if (page.frames().length > 1) await page.waitForTimeout(3000);
 
     const best = await pickBestContext(page, target);
+    // 스크롤 탐색 후 상단으로 복귀 — 이제 폼 DOM 상태는 이미 inspect 완료
+    await page.evaluate(() => window.scrollTo(0, 0)).catch(() => {});
     if (best.captcha) {
       return {
         ...base,
